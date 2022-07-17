@@ -7,21 +7,24 @@ public class SceneLoad : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(SceneManager.GetActiveScene().name =="MainMenu")
-        {
-            SceneManager.SetActiveScene(SceneManager.GetSceneByName("Prototype 3"));
-            SceneManager.UnloadSceneAsync("MainMenu");
-        }
-        else
-        {
-            SceneManager.SetActiveScene(SceneManager.GetSceneByName("MainMenu"));
-            SceneManager.UnloadSceneAsync("Protoype 3");
-        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    void Play()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    void Restart()
+    {
+        SceneManager.LoadScene(1);
+    }
+    void Back()
+    {
+        SceneManager.LoadScene(0);
     }
 }
