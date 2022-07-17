@@ -15,16 +15,13 @@ public class SceneLoad : MonoBehaviour
     {
         
     }
-    void Play()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-    void Restart()
+    public void Play()
     {
         SceneManager.LoadScene(1);
     }
-    void Back()
+    public void Back()
     {
         SceneManager.LoadScene(0);
     }
+ 
 }
